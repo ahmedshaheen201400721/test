@@ -73,7 +73,7 @@ Route::get('/posts/{post}', function (Post $post) {
 
 Route::get('users',function(Request $request){
 //    dd($request,request());
-dd(File::get(base_path('lang/en/auth.php')));
+dd(File::getRequire(base_path('lang/en/test.php')));
 echo asset('storage/example.txt');
 
 Storage::put('example.txt', 'Contents');
