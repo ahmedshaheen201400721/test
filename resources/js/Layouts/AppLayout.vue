@@ -225,6 +225,7 @@
 
             <!-- Page Content -->
             <main>
+                <FlashMessages />
                 <slot></slot>
             </main>
         </div>
@@ -232,6 +233,7 @@
 </template>
 
 <script>
+
     import { defineComponent, warn, watch } from 'vue'
     import JetApplicationMark from '@/Jetstream/ApplicationMark.vue'
     import JetBanner from '@/Jetstream/Banner.vue'
@@ -240,6 +242,7 @@
     import JetNavLink from '@/Jetstream/NavLink.vue'
     import JetResponsiveNavLink from '@/Jetstream/ResponsiveNavLink.vue'
     import { Head, Link, useForm } from '@inertiajs/inertia-vue3';
+    import FlashMessages from '../shared/FlashMessages.vue';
 
     export default defineComponent({
         props: {
@@ -280,6 +283,7 @@
 
 <script setup>
 import { usePage } from '@inertiajs/inertia-vue3';
+import FlashMessagesVue from '../shared/FlashMessages.vue'
 console.log(usePage().url.value);
 
 console.log('Hello from setup')
